@@ -5,7 +5,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name="Tickets")
 @AllArgsConstructor
-@NoArgsConstructor(access=AccessLevel.PRIVATE)
+@NoArgsConstructor
 @Builder
 @Data
 
@@ -26,6 +25,7 @@ public class tickets {
 	private int id;
 	private String ticketTitle;
 	private String ticketDescription;
+	private String ticketContent;
 	private String ticketDate;
 	
 
